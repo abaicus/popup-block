@@ -1,0 +1,77 @@
+{
+  "name": "abs/popup-block",
+  "title": "Popup",
+  "category": "design",
+  "icon": <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="#FF0066" d="M28,-40.3C36.5,-32.3,43.7,-24.4,51.6,-13.6C59.5,-2.7,68.1,11.1,67,24.1C66,37.2,55.4,49.5,42.7,51.6C29.9,53.7,15,45.6,-0.3,46.1C-15.6,46.6,-31.2,55.5,-41.2,52.5C-51.1,49.4,-55.3,34.4,-55.4,21.1C-55.6,7.7,-51.6,-3.9,-48.5,-16.4C-45.3,-29,-43,-42.5,-35.1,-50.7C-27.1,-58.9,-13.6,-61.8,-1.9,-59.2C9.7,-56.5,19.5,-48.3,28,-40.3Z" transform="translate(100 100)" /></svg>,
+  "description": "A popup/modal block for the WordPress block editor.",
+  "keywords": [
+    "popup",
+    "modal"
+  ],
+  "attributes": {
+    "width": {
+      "type": "number",
+      "default": 400
+    },
+    "address": {
+      "type": "string",
+      "default": ""
+    },
+    "height": {
+      "type": "string",
+      "default": "450"
+    },
+    "longitude": {
+      "type": "number",
+      "default": -0.1326724377053381
+    },
+    "rotation": {
+      "type": "number",
+      "default": 0
+    },
+    "zoom": {
+      "type": "number",
+      "default": 15
+    },
+    "mapType": {
+      "type": "string",
+      "default": "Map.MapTypes.Standard"
+    },
+    "showsMapTypeControl": {
+      "type": "boolean",
+      "default": true
+    },
+    "isRotationEnabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "showsCompass": {
+      "type": "string",
+      "default": "FeatureVisibility.Adaptive"
+    },
+    "isZoomEnabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "showsZoomControl": {
+      "type": "boolean",
+      "default": true
+    },
+    "isScrollEnabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "showsScale": {
+      "type": "string",
+      "default": "FeatureVisibility.Adaptive"
+    },
+    "markers": {
+      "type": "array",
+      "default": []
+    }
+  },
+  "editorScript": "file:build/index.js",
+  "editorStyle": "file:editor.css",
+  "script": "file:build/frontend.js",
+  "style": "file:style.css"
+}

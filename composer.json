@@ -1,0 +1,25 @@
+{
+	"name": "abs/popup-block",
+	"description": "A popup/modal block for the WordPress block editor.",
+	"version": "0.0.1",
+	"type": "wordpress-plugin",
+	"homepage": "https://abaic.us",
+	"license": "GPLv2 or later",
+	"authors": [
+		{
+			"name": "Andrei Baicus",
+			"email": "andrei@themeisle.com",
+			"homepage": "https://abaic.us",
+			"role": "Developer"
+		}
+	],
+	"require-dev": {
+		"wp-coding-standards/wpcs": "^2.2",
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.5.0"
+	},
+	"scripts": {
+		"lint": "./vendor/bin/phpcs",
+		"format": "./vendor/bin/phpcbf --extensions=php ."
+	},
+	"minimum-stability": "dev"
+}
