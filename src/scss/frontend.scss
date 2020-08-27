@@ -1,25 +1,59 @@
-.abs-popup {
+$base-index : 9999 !default;
 
-	.modal-wrap {
+.abs-popup {
+	&.front {
+		display: none;
+	}
+
+	&.front.active {
+		display: block;
+	}
+
+	.overlay {
+		background-color: rgba(0, 0, 0, 0.5);
+		left:0;
+		right: 0;
+		top:0;
+		bottom: 0;
+		position: absolute;
+		z-index: $base-index - 1;
+	}
+	.abs-modal-wrap {
 		position: fixed;
 		top: 0;
 		bottom: 0;
 		right: 0;
 		left: 0;
-		background-color: rgba(0, 0, 0, 0.5);
-		z-index: 100000;
+		z-index: $base-index;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		//pointer-events: none;
 	}
-
-	.modal-body {
+	.modal-content {
+		position: relative;
+		z-index: $base-index + 1;
+		background-color: #fff;
+		padding: 20px;
 		max-width: 500px;
 	}
 
-	.modal-content {
-		background-color: #fff;
-		padding: 30px;
+	.modal-body > * {
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+	button.close {
+		background-color: transparent !important;
+		height: auto !important;
+		display: flex;
+		align-items: center;
+		height: auto;
+		padding: 0 !important;
+		border: none;
+	}
+
+	.modal-header {
+		display: flex;
+		justify-content: flex-end;
 	}
 }

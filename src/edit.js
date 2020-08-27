@@ -3,15 +3,52 @@ import { Button, Icon } from '@wordpress/components';
 import { InnerBlocks } from '@wordpress/block-editor';
 import { useState } from '@wordpress/element';
 
+import { CloseIcon } from './components/icons';
 import './scss/editor.scss';
 import InspectorSettings from './inspector-settings';
 import BlockIcon from './icon';
-const Edit = () => {
+const Edit = ( props ) => {
 	const [ previewing, setPreviewing ] = useState( false );
+	const { attributes } = props;
+	const {
+		width,
+		backgroundColor,
+		gradientBackground,
+		showCloseButton,
+		closeButtonColor,
+		closeButtonSize,
+		borderRadius,
+		overlayColor,
+		overlayOpacity,
+	} = attributes;
+
+	const style = {
+		minWidth: width,
+		borderRadius,
+	};
+	const closeButtonStyle = {};
+
+	if ( backgroundColor ) {
+		style.backgroundColor = backgroundColor;
+	}
+
+	if ( gradientBackground ) {
+		style.background = gradientBackground;
+	}
+
+	if ( closeButtonColor ) {
+		closeButtonStyle.color = closeButtonColor;
+	}
 
 	const togglePreview = ( e ) => {
 		e.preventDefault();
 		setPreviewing( ! previewing );
+	};
+
+	const showPreview = () => {
+		if ( ! previewing ) {
+			setPreviewing( true );
+		}
 	};
 
 	return (
@@ -24,13 +61,31 @@ const Edit = () => {
 					</Button>
 				</div>
 				{ previewing && (
-					<div className="modal-wrap">
-						<div className="modal-content">
-							<div className="modal-header">
-								<Button onClick={ togglePreview }>
-									<Icon icon="no" />
-								</Button>
-							</div>
+					<div className="abs-modal-wrap">
+						<div
+							style={ {
+								backgroundColor: overlayColor,
+								opacity: overlayOpacity / 100,
+							} }
+							role="presentation"
+							className="overlay"
+							onClick={ togglePreview }
+						/>
+						<div className="modal-content" style={ style }>
+							{ showCloseButton && (
+								<div className="modal-header">
+									<button
+										className="close"
+										style={ closeButtonStyle }
+										onClick={ togglePreview }
+									>
+										<CloseIcon
+											color={ closeButtonColor }
+											size={ closeButtonSize }
+										/>
+									</button>
+								</div>
+							) }
 							<div className="modal-body">
 								<InnerBlocks />
 							</div>
@@ -38,7 +93,12 @@ const Edit = () => {
 					</div>
 				) }
 			</div>
-			<InspectorSettings />
+			<InspectorSettings
+				{ ...props }
+				showPreview={ () => {
+					showPreview();
+				} }
+			/>
 		</>
 	);
 };
