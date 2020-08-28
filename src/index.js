@@ -12,18 +12,11 @@ import Save from './save';
 import Icon from './icon';
 
 registerBlockType( 'abs/popup-block', {
-	title: __( 'Popup Block', 'maps-block-apple' ),
-	description: __( 'A popup block.', 'maps-block-apple' ),
+	title: __( 'Popup Block', 'abs-popup' ),
+	description: __( 'A popup block.', 'abs-popup' ),
 	category: 'design',
 	icon: Icon,
 	attributes,
-	example: {
-		// attributes: {
-		// 	latitude: 51.48762585296625,
-		// 	longitude: -0.1326724377053381,
-		// },
-	},
-	supports: {},
 	edit: Edit,
 	save: Save,
 } );

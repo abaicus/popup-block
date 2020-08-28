@@ -75,7 +75,7 @@
       "type": "string"
     },
     "dismissForVisitors": {
-      "type": "bool",
+      "type": "boolean",
       "default": true
     },
     "dismissPeriod": {

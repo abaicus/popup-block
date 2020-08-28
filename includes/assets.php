@@ -9,6 +9,7 @@ namespace ABS\Popup_Block;
 
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\assets_editor' );
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\assets_frontend' );
+add_action( 'init', __NAMESPACE__ . '\set_script_translations' );
 
 /**
  * Register block assets
@@ -56,7 +57,7 @@ function assets_frontend() {
 		return;
 	}
 
-	$id            = get_the_ID();
+	$id = get_the_ID();
 
 	if ( empty( $id ) ) {
 		return;
@@ -81,4 +82,11 @@ function assets_frontend() {
 		[],
 		$dependencies['version']
 	);
+}
+
+/**
+ * Load translations.
+ */
+function set_script_translations() {
+	wp_set_script_translations( 'abs-popup-block', 'abs-popup' );
 }
