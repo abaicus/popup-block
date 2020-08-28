@@ -21,6 +21,7 @@ const Save = ( props ) => {
 		closeOnAnchorClick,
 		dismissForVisitors,
 		dismissPeriod,
+		uuid,
 	} = attributes;
 	const modalStyle = {
 		minWidth: width,
@@ -33,17 +34,6 @@ const Save = ( props ) => {
 	if ( gradientBackground ) {
 		modalStyle.background = gradientBackground;
 	}
-	if ( closeButtonColor ) {
-		modalStyle.color = closeButtonColor;
-	}
-
-	const closeButtonStyle = {};
-	if ( closeButtonColor ) {
-		closeButtonStyle.fill = closeButtonColor;
-	}
-
-	const now = new Date();
-	const created = now.getTime();
 
 	return (
 		<div
@@ -55,7 +45,7 @@ const Save = ( props ) => {
 			data-dismiss={ dismissForVisitors ? dismissPeriod : '' }
 			data-offset={ openBehaviour === 'scroll' ? offset : '' }
 			data-outside={ closeOnClickOutside }
-			data-created={ created }
+			data-created={ uuid }
 		>
 			<div className="abs-modal-wrap">
 				<div
@@ -68,7 +58,7 @@ const Save = ( props ) => {
 				/>
 				<div className="modal-content" style={ modalStyle }>
 					<div className="modal-header">
-						<button className="close" style={ closeButtonStyle }>
+						<button className="close">
 							<CloseIcon
 								color={ closeButtonColor }
 								size={ closeButtonSize }

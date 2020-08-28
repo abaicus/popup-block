@@ -50,6 +50,14 @@ $base-index : 9999 !default;
 		height: auto;
 		padding: 0 !important;
 		border: none;
+		cursor: pointer;
+		&:hover {
+			opacity: .75;
+		}
+		&:focus {
+			border: none !important;
+			outline: none;
+		}
 	}
 
 	.modal-header {

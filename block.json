@@ -81,6 +81,10 @@
     "dismissPeriod": {
       "type": "number",
       "default": 20
+    },
+    "uuid": {
+      "type": "number",
+      "default": null
     }
   },
   "editorScript": "file:build/index.js",

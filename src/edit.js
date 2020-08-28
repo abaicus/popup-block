@@ -9,7 +9,7 @@ import InspectorSettings from './inspector-settings';
 import BlockIcon from './icon';
 const Edit = ( props ) => {
 	const [ previewing, setPreviewing ] = useState( false );
-	const { attributes } = props;
+	const { attributes, setAttributes } = props;
 	const {
 		width,
 		backgroundColor,
@@ -20,7 +20,12 @@ const Edit = ( props ) => {
 		borderRadius,
 		overlayColor,
 		overlayOpacity,
+		uuid,
 	} = attributes;
+
+	if ( uuid === null ) {
+		setAttributes( { uuid: Math.floor( Math.random() * 8388607 ) } ); // Medium int max value is 8388607;
+	}
 
 	const style = {
 		minWidth: width,
