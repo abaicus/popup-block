@@ -4,7 +4,10 @@ class PopupBlock {
 		this.element = element;
 		this.happened = false;
 		this.storageKey = 'abs-popup-dismiss';
-		if ( this.isItemDismissed() ) {
+
+		const { dismiss } = element.dataset;
+
+		if ( this.isItemDismissed() || ! dismiss ) {
 			return false;
 		}
 		this.init();
