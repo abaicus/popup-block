@@ -56,6 +56,16 @@ function assets_frontend() {
 		return;
 	}
 
+	$id            = get_the_ID();
+
+	if ( empty( $id ) ) {
+		return;
+	}
+
+	if ( ! has_block( 'abs/popup-block', $id ) ) {
+		return;
+	}
+
 	$dependencies = ( include ABS_POPUP_PATH . 'build/frontend.asset.php' );
 	wp_enqueue_script(
 		'abs-popup',

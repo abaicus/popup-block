@@ -5,9 +5,6 @@ import {
 	CheckboxControl,
 	TextControl,
 	RangeControl,
-	Radio,
-	RadioGroup,
-	Icon,
 } from '@wordpress/components';
 
 const CloseBehaviour = ( props ) => {
