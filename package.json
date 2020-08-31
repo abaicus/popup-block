@@ -9,7 +9,13 @@
     "role": "developer"
   },
   "license": "GPL-2.0-or-later",
-  "keywords": ["popup", "modal","block","WordPress", "Gutenberg"],
+  "keywords": [
+    "popup",
+    "modal",
+    "block",
+    "WordPress",
+    "Gutenberg"
+  ],
   "homepage": "https://wordpress.org/plugins/popup-block/",
   "repository": {
     "type": "git",
@@ -38,5 +44,8 @@
     "start": "wp-scripts start src/index.js src/frontend.js",
     "test:e2e": "wp-scripts test-e2e",
     "test:unit": "wp-scripts test-unit-js"
+  },
+  "dependencies": {
+    "nanoid": "^3.1.12"
   }
 }

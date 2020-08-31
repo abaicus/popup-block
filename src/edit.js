@@ -2,6 +2,7 @@ import { __ } from '@wordpress/i18n';
 import { Button, Icon } from '@wordpress/components';
 import { InnerBlocks } from '@wordpress/block-editor';
 import { useState } from '@wordpress/element';
+import { nanoid } from 'nanoid';
 
 import { CloseIcon } from './components/icons';
 import './scss/editor.scss';
@@ -24,7 +25,7 @@ const Edit = ( props ) => {
 	} = attributes;
 
 	if ( uuid === null ) {
-		setAttributes( { uuid: Math.floor( Math.random() * 8388607 ) } ); // Medium int max value is 8388607;
+		setAttributes( { uuid: nanoid() } ); // Medium int max value is 8388607;
 	}
 
 	const style = {
