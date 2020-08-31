@@ -49,3 +49,4 @@ dashboard/webpack.config.js
 visual-regressions
 yarn.lock
 .phpcs.xml
+src
