@@ -7,7 +7,7 @@ class PopupBlock {
 
 		const { dismiss } = element.dataset;
 
-		if ( this.isItemDismissed() || ! dismiss ) {
+		if ( this.isItemDismissed() && dismiss ) {
 			return false;
 		}
 		this.init();
