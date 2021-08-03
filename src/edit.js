@@ -2,6 +2,8 @@ import { __ } from '@wordpress/i18n';
 import { Button, Icon } from '@wordpress/components';
 import { InnerBlocks } from '@wordpress/block-editor';
 import { useState } from '@wordpress/element';
+import { external } from '@wordpress/icons';
+
 import { nanoid } from 'nanoid';
 
 import { CloseIcon } from './components/icons';
@@ -61,8 +63,11 @@ const Edit = ( props ) => {
 		<>
 			<div className="abs-popup">
 				<div className="popup-preview">
-					<Button isPrimary onClick={ togglePreview }>
-						<Icon icon={ BlockIcon } />
+					<Button
+						isPrimary
+						icon={ external }
+						onClick={ togglePreview }
+					>
 						{ __( 'Show Popup', 'abs-popup' ) }
 					</Button>
 				</div>
