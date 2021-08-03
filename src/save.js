@@ -21,6 +21,7 @@ const Save = ( props ) => {
 		closeOnAnchorClick,
 		dismissForVisitors,
 		dismissPeriod,
+		showCloseButton,
 		uuid,
 	} = attributes;
 	const modalStyle = {
@@ -57,14 +58,16 @@ const Save = ( props ) => {
 					} }
 				/>
 				<div className="modal-content" style={ modalStyle }>
-					<div className="modal-header">
-						<button className="close">
-							<CloseIcon
-								color={ closeButtonColor }
-								size={ closeButtonSize }
-							/>
-						</button>
-					</div>
+					{ showCloseButton && (
+						<div className="modal-header">
+							<button className="close">
+								<CloseIcon
+									color={ closeButtonColor }
+									size={ closeButtonSize }
+								/>
+							</button>
+						</div>
+					) }
 					<div className="modal-body">
 						<InnerBlocks.Content />
 					</div>
