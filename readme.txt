@@ -2,9 +2,9 @@
 Contributors:      baicusandrei
 Tags:              popup, modal, block
 Requires at least: 5.2
-Tested up to:      5.5
+Tested up to:      5.8
 Requires PHP:      5.6
-Stable tag:        0.0.1
+Stable tag:        0.0.2
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,6 +27,10 @@ This plugin adds a customizable Popup Block to the WordPress block editor.
 3. Block Open/Close Advanced Options
 
 == Changelog ==
+
+= 0.0.2 =
+* Fix exit intent not working in firefox
+* Fix hiding of close button not working
 
 = 0.0.1 =
 * Initial release.

@@ -17,7 +17,7 @@
 
 namespace ABS\Popup_Block;
 
-define( 'ABS_POPUP_VERSION', '0.0.1' );
+define( 'ABS_POPUP_VERSION', '0.0.2' );
 define( 'ABS_POPUP_URL', plugin_dir_url( __FILE__ ) );
 define( 'ABS_POPUP_PATH', dirname( __FILE__ ) . '/' );
 define( 'ABS_POPUP_INC', ABS_POPUP_PATH . 'includes/' );

@@ -2,7 +2,7 @@
 
 A popup/modal block for the WordPress block editor.
 
-[![Support Level](https://img.shields.io/badge/support-active-green.svg)](#support-level)  ![WordPress tested up to version](https://img.shields.io/badge/WordPress-v5.5%20tested-success.svg)
+[![Support Level](https://img.shields.io/badge/support-active-green.svg)](#support-level)  ![WordPress tested up to version](https://img.shields.io/badge/WordPress-v5.8%20tested-success.svg)
 
 ## Overview
 
