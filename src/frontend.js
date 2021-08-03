@@ -3,7 +3,7 @@ import domReady from '@wordpress/dom-ready';
 import { PopupBlock } from './components/PopupBlock';
 import './scss/frontend.scss';
 
-domReady( async () => {
+domReady( () => {
 	const popups = document.querySelectorAll( '.abs-popup' );
 
 	if ( ! popups.length ) {

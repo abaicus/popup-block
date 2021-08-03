@@ -136,7 +136,7 @@ class PopupBlock {
 	}
 
 	bindExitIntent() {
-		document.addEventListener( 'mouseleave', ( e ) => {
+		document.body.addEventListener( 'mouseleave', ( e ) => {
 			if ( this.happened ) {
 				return false;
 			}
