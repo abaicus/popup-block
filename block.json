@@ -83,7 +83,7 @@
       "default": 20
     },
     "uuid": {
-      "type": "number",
+      "type": "string",
       "default": null
     }
   },
