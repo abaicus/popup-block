@@ -13,6 +13,7 @@ const Appearance = ( props ) => {
 		borderRadius,
 		overlayColor,
 		overlayOpacity,
+		showCloseButton,
 	} = attributes;
 
 	return (
@@ -60,31 +61,39 @@ const Appearance = ( props ) => {
 					/>
 				</PanelRow>
 				<hr />
-				<PanelRow>
-					<RangeControl
-						value={ closeButtonSize }
-						label={ __( 'Close Icon Size', 'abs-popup' ) }
-						onChange={ ( val ) => {
-							showPreview();
-							setAttributes( { closeButtonSize: val } );
-						} }
-						min={ 0 }
-						max={ 60 }
-					/>
-				</PanelRow>
-				<PanelRow>
-					<ColorGradientControl
-						label={ __( 'Close Button Color', 'abs-popup' ) }
-						colorValue={ closeButtonColor }
-						onColorChange={ ( val ) => {
-							showPreview();
-							setAttributes( {
-								closeButtonColor: val || '#000000',
-							} );
-						} }
-					/>
-				</PanelRow>
-				<hr />
+				{ showCloseButton && (
+					<>
+						<PanelRow>
+							<RangeControl
+								value={ closeButtonSize }
+								label={ __( 'Close Icon Size', 'abs-popup' ) }
+								onChange={ ( val ) => {
+									showPreview();
+									setAttributes( { closeButtonSize: val } );
+								} }
+								min={ 0 }
+								max={ 60 }
+							/>
+						</PanelRow>
+						<PanelRow>
+							<ColorGradientControl
+								label={ __(
+									'Close Button Color',
+									'abs-popup'
+								) }
+								colorValue={ closeButtonColor }
+								onColorChange={ ( val ) => {
+									showPreview();
+									setAttributes( {
+										closeButtonColor: val || '#000000',
+									} );
+								} }
+							/>
+						</PanelRow>
+						<hr />
+					</>
+				) }
+
 				<PanelRow>
 					<ColorGradientControl
 						label={ __( 'Overlay Color', 'abs-popup' ) }

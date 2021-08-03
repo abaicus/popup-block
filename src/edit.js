@@ -9,7 +9,6 @@ import { nanoid } from 'nanoid';
 import { CloseIcon } from './components/icons';
 import './scss/editor.scss';
 import InspectorSettings from './inspector-settings';
-import BlockIcon from './icon';
 const Edit = ( props ) => {
 	const [ previewing, setPreviewing ] = useState( false );
 	const { attributes, setAttributes } = props;
