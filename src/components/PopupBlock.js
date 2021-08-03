@@ -114,13 +114,14 @@ class PopupBlock {
 	}
 
 	bindOpenAfterScroll() {
-		document.addEventListener( 'scroll', () => {
+		window.document.addEventListener( 'scroll', () => {
 			if ( this.happened ) {
 				return false;
 			}
 
 			const { offset } = this.element.dataset;
-			if ( offset <= this.getScrolledPercent() ) {
+
+			if ( parseInt( offset ) >= parseInt( this.getScrolledPercent() ) ) {
 				return false;
 			}
 
