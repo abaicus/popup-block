@@ -30,7 +30,11 @@ This plugin adds a customizable Popup Block to the WordPress block editor.
 
 = 0.0.2 =
 * Fix exit intent not working in firefox
-* Fix hiding of close button not working
+* Fix close button hiding  not working
+* Fix unique identifier for modal having wrong type, causing block to get invalidated
+* Overflow when content has large height
+* Open after scroll offset was not properly calculated
+
 
 = 0.0.1 =
 * Initial release.
