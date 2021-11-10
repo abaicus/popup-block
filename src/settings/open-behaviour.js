@@ -52,12 +52,19 @@ const OpenBehaviour = ( props ) => {
 						value={ anchor }
 						label={ __( 'Anchor', 'abs-popup' ) }
 						help={
-							<small>
-								{ __(
-									'You can add anchors to button blocks. Using the same anchor here will open the modal when you click the respective button.',
-									'abs-popup'
-								) }
-							</small>
+							<>
+								<small>
+									{__(
+										'You can add anchors to button blocks. Using the same anchor here will open the modal when you click the respective button.',
+										'abs-popup'
+									)}
+								</small>
+								<br/>
+								<hr/>
+								<span><code>#example</code> - {__('for link href attributes', 'abs-popup')}</span>
+								<br/>
+								<span><code>example</code> - {__('for anchor attributes', 'abs-popup')}</span>
+							</>
 						}
 						onChange={ updateAnchor }
 					/>

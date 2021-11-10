@@ -105,7 +105,8 @@ class PopupBlock {
 		}
 
 		const buttons = document.querySelectorAll( `#${ anchor }` );
-		buttons.forEach( ( button ) => {
+		const hrefs = document.querySelectorAll( `[href='#${anchor}']` );
+		[...buttons, ...hrefs].forEach( ( button ) => {
 			button.addEventListener( 'click', ( e ) => {
 				e.preventDefault();
 				this.openModal();
