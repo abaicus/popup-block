@@ -3,7 +3,7 @@
  * Plugin Name:       Popup / Modal Block
  * Plugin URI:        https://github.com/abaicus/popup-block
  * Description:       A popup/modal block for the WordPress block editor.
- * Version:           0.0.1
+ * Version:           0.0.3
  * Requires at least: 5.2
  * Requires PHP:      5.6
  * Author:            abaicus
