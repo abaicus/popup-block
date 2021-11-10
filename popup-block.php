@@ -3,7 +3,7 @@
  * Plugin Name:       Popup / Modal Block
  * Plugin URI:        https://github.com/abaicus/popup-block
  * Description:       A popup/modal block for the WordPress block editor.
- * Version:           0.0.3
+ * Version:           0.0.4
  * Requires at least: 5.2
  * Requires PHP:      5.6
  * Author:            abaicus
@@ -17,7 +17,7 @@
 
 namespace ABS\Popup_Block;
 
-define( 'ABS_POPUP_VERSION', '0.0.3' );
+define( 'ABS_POPUP_VERSION', '0.0.4' );
 define( 'ABS_POPUP_URL', plugin_dir_url( __FILE__ ) );
 define( 'ABS_POPUP_PATH', dirname( __FILE__ ) . '/' );
 define( 'ABS_POPUP_INC', ABS_POPUP_PATH . 'includes/' );
